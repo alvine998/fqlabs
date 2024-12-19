@@ -51,14 +51,14 @@ const Navbar: React.FC = () => {
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </div>
         <ul
-          className={`absolute left-0 md:top-16 top-0 md:ml-60 ml-0 w-full z-50 bg-blue-700 p-6 space-y-4 transform transition-transform duration-300 md:static md:flex md:space-y-0 md:space-x-10 md:p-0 md:transform-none ${
+          className={`absolute left-0 md:top-10 top-0 md:ml-[400px] ml-0 w-full z-50 bg-blue-700 p-6 space-y-4 transform transition-transform duration-300 md:static md:flex md:space-y-0 md:space-x-10 md:p-0 md:transform-none ${
             isOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
           {tabs?.map((tab, index) => (
             <Link href={tab?.href}>
               <p
-                className={`text-white duration-200 mt-2 text-lg ${
+                className={`text-white duration-200 text-lg ${
                   tab?.current ? "text-white font-bold" : "hover:text-blue-300"
                 }`}
               >
